@@ -8,12 +8,20 @@
     "server": "cd backend && npm run dev",
     "client": "cd frontend && npm start",
     "install-all": "npm install && cd backend && npm install && cd ../frontend && npm install",
-    "build": "cd frontend && npm run build"
+    "build": "cd frontend && npm install && npm run build",
+    "vercel-build": "cd frontend && npm install && npm run build"
   },
   "devDependencies": {
     "concurrently": "^8.2.0"
   },
-  "keywords": ["books", "tracker", "mern", "react", "nodejs", "mongodb"],
+  "keywords": [
+    "books",
+    "tracker",
+    "mern",
+    "react",
+    "nodejs",
+    "mongodb"
+  ],
   "author": "",
   "license": "ISC"
 }
