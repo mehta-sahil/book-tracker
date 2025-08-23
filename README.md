@@ -15,4 +15,3 @@ The app lets you keep track of books you want to read, are currently reading, or
 
 ---
 
-Built just for fun and learning 🚀
