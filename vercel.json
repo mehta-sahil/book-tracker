@@ -6,5 +6,12 @@
     "api/**/*.js": {
       "runtime": "nodejs18.x"
     }
-  }
+  },
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "destination": "https://book-tracker-ochre-six.vercel.app/",
+      "permanent": true
+    }
+  ]
 }
