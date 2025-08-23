@@ -18,6 +18,14 @@ const BookForm = ({ onSubmit, editingBook, onCancel }) => {
         notes: editingBook.notes || "",
         rating: editingBook.rating || "",
       });
+    } else {
+      setFormData({
+        title: "",
+        author: "",
+        status: "want-to-read",
+        notes: "",
+        rating: "",
+      });
     }
   }, [editingBook]);
 

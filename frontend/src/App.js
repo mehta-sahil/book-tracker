@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import BookForm from "./components/BookForm";
 import BookList from "./components/BookList";
+import Login from "./components/Login";
 import BookService from "./services/BookService";
 import "./App.css";
 
 function App() {
   const [books, setBooks] = useState([]);
   const [editingBook, setEditingBook] = useState(null);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
     loadBooks();
@@ -51,13 +53,32 @@ function App() {
 
   const handleEditBook = (book) => {
     setEditingBook(book);
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   };
+
+  const handleLogin = () => {
+    setIsLoggedIn(true);
+  };
+
+  if (!isLoggedIn) {
+    return <Login onLogin={handleLogin} />;
+  }
 
   return (
     <div className="App">
       <header className="App-header">
-        <h1>📚 Book Tracker</h1>
-        <p>Track your reading journey</p>
+        <div className="header-content">
+          <div className="header-left">
+            <h1>Book Tracker</h1>
+            <p>Track your reading journey</p>
+          </div>
+          <button className="logout-btn" onClick={() => setIsLoggedIn(false)}>
+            Logout
+          </button>
+        </div>
       </header>
 
       <main>

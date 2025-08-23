@@ -17,11 +17,11 @@ const BookList = ({ books, onEdit, onDelete }) => {
   const getStatusText = (status) => {
     switch (status) {
       case "read":
-        return "✅ Read";
+        return "Read";
       case "reading":
-        return "📖 Reading";
+        return "Reading";
       case "want-to-read":
-        return "📚 Want to Read";
+        return "Want to Read";
       default:
         return status;
     }
@@ -29,7 +29,7 @@ const BookList = ({ books, onEdit, onDelete }) => {
 
   const renderStars = (rating) => {
     if (!rating) return <span className="no-rating">No rating</span>;
-    return "⭐".repeat(rating);
+    return "★".repeat(rating);
   };
 
   if (books.length === 0) {
@@ -72,13 +72,13 @@ const BookList = ({ books, onEdit, onDelete }) => {
 
             <div className="book-actions">
               <button className="btn btn-edit" onClick={() => onEdit(book)}>
-                ✏️ Edit
+                Edit
               </button>
               <button
                 className="btn btn-delete"
                 onClick={() => onDelete(book._id)}
               >
-                🗑️ Delete
+                Delete
               </button>
             </div>
 
