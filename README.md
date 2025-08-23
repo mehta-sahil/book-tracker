@@ -4,7 +4,7 @@ A simple and elegant book tracking application built with the MERN stack (MongoD
 
 ## ✨ Features
 
-- **Add Books**: Track books you want to read, are currently reading, or have finished
+- **Add Books**: Track books you want to read, are currently reading, or have finishe
 - **Book Details**: Store title, author, status, notes, and ratings (1-5 stars)
 - **CRUD Operations**: Create, read, update, and delete books
 - **Status Tracking**: Three reading statuses - Want to Read, Currently Reading, Read
